@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rock+3D&family=Shizuru&display=swap" rel="stylesheet"> 
+    
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    
+    <!-- SCRIPT-->
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div id="par-div">
+        <header>
+            <h1>ROCK PAPER SCISSORS</h1>
+            <h3>CAN YOU WIN??</h3>
+        </header>
+
+        <div id="animation-div">
+            <div id="player" class="plc-icon-div">
+                <img src="images/person-fill.svg" alt="" class="plc-icon">
+            </div>
+            <div id="animate-div">
+                <div id="animate-player-div">
+                    <img src="images/paper-art.png" alt="" class="animate-img">
+                </div>
+            
+                <div id="animate-computer-div">
+                    <img src="images/scissor-art.png" alt="" class="animate-img">
+                </div>
+            </div>
+            <div id="computer" class="plc-icon-div">
+                <img src="images/cpu-fill.svg" alt="" class="plc-icon">
+            </div>
+        </div>
+ 
+        <div id="main-ui">
+            <div class="btn-div" id="player-btn-div">
+                <button class="rps-btn" id="rock">
+                    <img src="images/rock-btn.png" alt="" class="btns">
+                </button>
+                
+                <button class="rps-btn">
+                    <img src="images/paper-btn.png" alt="" class="btns">
+                </button>
+                
+                <button class="rps-btn">
+                    <img src="images/scissor-btn.png" alt="" class="btns">
+                </button>
+            </div>
+            <div id="scoreboard-div">
+                <div id="score-board">
+
+                </div>
+
+                <div id="history">
+
+                </div>
+            </div>
+
+            <div class="btn-div" id="computer-btn-div">
+                <button class="crps-btn" id="rock">
+                    <img src="images/rock-btn.png" alt="" class="btns">
+                </button>
+                
+                <button class="crps-btn">
+                    <img src="images/paper-btn.png" alt="" class="btns">
+                </button>
+                
+                <button class="crps-btn">
+                    <img src="images/scissor-btn.png" alt="" class="btns">
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
