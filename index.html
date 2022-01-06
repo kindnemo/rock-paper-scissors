@@ -8,14 +8,20 @@
     
     
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
     
     
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rock+3D&family=Shizuru&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500&family=Shadows+Into+Light&family=Shizuru&display=swap" rel="stylesheet"> 
     
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
@@ -30,7 +36,7 @@
     <div id="par-div">
         <header>
             <h1>ROCK PAPER SCISSORS</h1>
-            <h3>CAN YOU WIN??</h3>
+            <h2>CAN YOU WIN??</h2>
         </header>
 
         <div id="animation-div">
@@ -39,7 +45,7 @@
             </div>
             <div id="animate-div">
                 <div id="animate-player-div">
-                    <img src="images/paper-art.png" alt="" class="animate-img">
+                    <img src="images/stone-art.png" alt="" class="animate-img">
                 </div>
             
                 <div id="animate-computer-div">
@@ -67,11 +73,13 @@
             </div>
             <div id="scoreboard-div">
                 <div id="score-board">
-
+                    <p id="player-score">0</p>
+                    <p>:</p> 
+                    <p id="computer-score">0</p>
                 </div>
 
                 <div id="history">
-
+                    <p>Player: Rock, Computer: Scissors, Player wins</p>
                 </div>
             </div>
 
