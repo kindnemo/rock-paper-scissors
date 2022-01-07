@@ -7,25 +7,7 @@ body{
     flex-direction: column;
     align-items: center;
 }
-header{
-    background-color: #EFF594;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; 
-    padding: 7px;
-}
-h1{
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 30px;
-    color: black;
-}
-h2{
-    font-family: 'Shadows Into Light', cursive;
-    font-size: 20px;
-    margin-top: 10px;
-}
+
 #animation-div{
     display: flex;
     flex-direction: row;
@@ -40,6 +22,7 @@ h2{
     width: 45%;
     justify-content: space-between;
     align-items: center;
+    border: 2px solid black;
     border-radius: 15px;
     padding: 0 10px 0 10px;
     margin: 10px;
@@ -59,8 +42,17 @@ h2{
     background-color: #F594BF;
     border-radius: 50%;
     padding: 10px;
+    border: 2px solid black;
     margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+.rps-btn:hover{
+    background-color: #9A94F5;
+    transform: scale(1.2);
+}
+
 .animate-img{
     width: 300px;
     height: auto;
@@ -73,19 +65,44 @@ h2{
     border-radius: 50%;
     margin: 30px;
     padding: 15px;
+    border: 2px solid black;
 }
 .plc-icon{
     height: 80px;
 }
 #scoreboard-div{
-    background-color: #EFF594;
+    /* background-color: #EFF594; */
     display: flex;
     flex-direction: column;
+    font-size: 20px;
     align-items: center;
     width: 50%;
     border-radius: 15px;
 }
 #score-board{
+    background-color: #EFF594;
+    width: 110%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    gap: 30px;
+}
+#history{
+    background-color: #EFF594;
+    width: 110%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 10px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    overflow: auto;
+    overflow-x: hidden;
 }
