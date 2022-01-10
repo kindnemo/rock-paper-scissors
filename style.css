@@ -1,47 +1,110 @@
 body{
-
+    font-family: 'Cairo', sans-serif;
+    background: url(images/background.jpg);
 }
 #par-div{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center; 
-}
+
 #animation-div{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    margin: 30px 0 30px 0;
+    margin: 15px 0 0 0;
     width: 100%;
 }
 #animate-div{
+    background-color: #9A94F5;
     display: flex;
-    width: 50%;
+    width: 45%;
     justify-content: space-between;
     align-items: center;
-    min-height: 300px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 0 10px 0 10px;
+    margin: 10px;
 }
 #main-ui{
+    width: 45%;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .btn-div{
     display: flex;
     flex-direction: column;
 }
+.rps-btn, .crps-btn{
+    border: none;
+    background-color: #F594BF;
+    border-radius: 50%;
+    padding: 10px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.rps-btn:active{
+    background-color: #9A94F5;
+}
+.rps-btn:hover{
+    transform: scale(1.1);
+}
 
 .animate-img{
-    height: 200px;
+    width: 300px;
+    height: auto;
 }
 .btns{
-    height: 80px;
+    width: 70px;
+}
+.plc-icon-div{
+    background-color: #F594BF;
+    border-radius: 50%;
+    margin: 30px;
+    padding: 15px;
+    border: 2px solid black;
 }
 .plc-icon{
-    height: 50px;
+    height: 80px;
+}
+#scoreboard-div{
+    /* background-color: #EFF594; */
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    align-items: center;
+    width: 50%;
+    border-radius: 15px;
+}
+#score-board{
+    background-color: #EFF594;
+    width: 110%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    font-size: 50px;
+    gap: 30px;
+}
+#history{
+    background-color: #EFF594;
+    width: 110%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    gap: 10px;
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 15px;
+    overflow: auto;
+    overflow-x: hidden;
 }
