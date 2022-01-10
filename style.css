@@ -45,11 +45,13 @@ body{
     border: 2px solid black;
     margin-bottom: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.1s;
 }
 
-.rps-btn:hover{
+.rps-btn:active{
     background-color: #9A94F5;
+}
+.rps-btn:hover{
     transform: scale(1.1);
 }
 
