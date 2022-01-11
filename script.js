@@ -2,7 +2,9 @@ const btns = document.querySelectorAll(".rps-btn");
 const playerScore = document.querySelector("#player-score");
 const computerScore= document.querySelector("#computer-score");
 const history = document.querySelector("#history");
-console.log(history);
+const animatePlayer = document.querySelector("#animate-player");
+const animateComputer = document.querySelector("#animate-computer");
+
 
 let compScore = 0;
 let plyrScore = 0;
@@ -30,6 +32,9 @@ function playerSelection(ev){
 
 function play(player, computer){
 
+    animatePlayer.src = `images/${player}.png`
+    animateComputer.src = `images/${computer}.png`
+    
     let whoWon;
 
     if(computer == player){
@@ -78,6 +83,8 @@ function play(player, computer){
 
 function game(_playerSelection, _computerSelection, _whoWon){
     
+    computerScore.textContent = compScore;
+    playerScore.textContent = plyrScore;
     
     let para = document.createElement("P");
     para.textContent = `Player: ${_playerSelection}, Computer: ${_computerSelection} ${_whoWon}`;
@@ -94,8 +101,6 @@ function game(_playerSelection, _computerSelection, _whoWon){
         compScore = 0
     }
     
-    computerScore.textContent = compScore;
-    playerScore.textContent = plyrScore;
     
 }
 
