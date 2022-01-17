@@ -2,10 +2,58 @@ body{
     font-family: 'Cairo', sans-serif;
     background: url(images/background.jpg);
 }
+#win-prompt{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    transition: 0.3s;
+}
+#win-prompt-div{
+    background-color: #EFF594;
+    width: 30%;
+    height: 40%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    font-weight: bold;
+    font-size: 4rem;
+    border-radius: 15px;
+    border: 5px solid #9A94F5;
+}
+.display-toggle{
+    display: none !important;
+}
+
+#replay{
+    background-color: #F594BF;
+    border: 2px solid black;
+    padding: 15px;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+#replay:hover{
+    background-color: #9A94F5;  
+}
 #par-div{
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
 
 #animation-div{
@@ -33,6 +81,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 .btn-div{
     display: flex;
@@ -47,6 +96,13 @@ body{
     margin-bottom: 10px;
     cursor: pointer;
     transition: 0.1s;
+}
+.crps-btn{
+    cursor:no-drop;
+}
+.crps-btn-active{
+    background-color: #9A94F5;
+    transform: scale(1.1);
 }
 
 .rps-btn:active{
@@ -103,9 +159,81 @@ body{
     flex-direction: column;
     font-weight: bold;
     gap: 10px;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     border: 2px solid black;
     border-radius: 15px;
     overflow: auto;
     overflow-x: hidden;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1337px){
+    .animate-img{
+        width: 250px;
+        height: auto;
+    }
+}
+
+@media (max-width: 1120px){
+    #main-ui{
+        width: 100%;
+    }
+    #animate-div{
+        width: 100%;
+    }
+    .btn-div{
+        padding: 0 30px 0 30px;
+    }
+}
+
+@media (max-width: 870px){
+    .plc-icon-div{
+        display: none;
+    }
+    #win-prompt-div{
+        width: 50%;
+    }
+}
+
+@media (max-width: 535px){
+    .animate-img{
+        width: 200px;
+        height: auto;
+    }
+}
+
+@media (max-width: 466px){
+    #win-prompt-div{
+        width: 90%;
+    }
+    .btn-div{
+        padding: 0 10px 0 10px;
+        margin: 0 5px 0 5px;
+    }
+    .btns{
+        width: 50px;
+    }
+}
+
+@media (max-width: 400px){
+    .animate-img{
+        width: 150px;
+        height: auto;
+    }
+    #animate-div{
+        height: 30vh;
+    }
+    #main-ui{
+        flex-direction: column;
+    }
+    .btn-div{
+        flex-direction: row;
+        margin: 10px;
+        gap: 10px;
+    }
+    #scoreboard-div{
+        width: 80%;
+    }
 }

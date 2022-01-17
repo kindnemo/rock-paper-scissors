@@ -4,11 +4,16 @@ const computerScore= document.querySelector("#computer-score");
 const history = document.querySelector("#history");
 const animatePlayer = document.querySelector("#animate-player");
 const animateComputer = document.querySelector("#animate-computer");
+const replayBtn = document.querySelector("#replay");
+const winPrompt = document.querySelector("#win-prompt");
+const winPromptPara = document.querySelector("#win-prompt-div");
+
 
 
 let compScore = 0;
 let plyrScore = 0;
-
+let roundCount = 1;
+let winner = document.createElement("P");
 
 // COMPUTER PLAY ARRAY
 function computerPlay(){
@@ -87,21 +92,46 @@ function game(_playerSelection, _computerSelection, _whoWon){
     playerScore.textContent = plyrScore;
     
     let para = document.createElement("P");
-    para.textContent = `Player: ${_playerSelection}, Computer: ${_computerSelection} ${_whoWon}`;
+    para.textContent = `${roundCount}- Player: ${_playerSelection}, Computer: ${_computerSelection} ${_whoWon}`;
     
     history.appendChild(para);
+    roundCount++;
+    updateScroll();
+    
     
     if(plyrScore == 5){
-        console.log("Player Wins");
+        winner.textContent = "You Win!"
+        winPromptPara.prepend(winner);
+        displayToggle();
         plyrScore = 0
         compScore = 0
     }else if(compScore == 5){
-        console.log("Computer wins");
+        winner.textContent = "You Lose!"
+        winPromptPara.prepend(winner);
+        displayToggle();
         plyrScore = 0
         compScore = 0
     }
-    
-    
+}
+
+function displayToggle(){
+    winPrompt.classList.toggle("display-toggle");
+}
+
+function replay(){
+    plyrScore=0;
+    compScore=0;
+    roundCount=1;
+    history.textContent ="";
+    displayToggle();
+    computerScore.textContent = "0";
+    playerScore.textContent = "0";
+}
+
+// TO MAKE THE HISTORY STAY AT BOTTOM SCROLL AS CONTENT IS ADDED
+function updateScroll(){
+    history.scrollTop = history.scrollHeight;
 }
 
 btns.forEach(ele => ele.addEventListener("click", playerSelection));
+replayBtn.addEventListener("click", replay);
